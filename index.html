@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<body>
+	<h1>Mars<h1>
+	<p>{{mars_data.url}}<p>
+	<p>{{mars_data.image_url}}<p>
+	<p>{{mars_data.headlines}}<p>
+	<a> class='btn' href='/scrape' role='button'>Press</a>
+	{% for image in mars_data.images_url %}
+	<img scr={{image_url}} style='height: 300px; width: 200px'>
+	{% endfor %}
+<body>
+<html>
