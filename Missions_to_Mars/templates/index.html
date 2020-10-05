@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+	<h1>Mars</h1>
+	<a class='btn' href='/scrape' role='button'>Press</a>
+	<p>{{mars_data.news_title}}</p>
+	<p>{{mars_data.news_p}}</p>
+	<img src={{mars_data.featured_image}} style='height: 300px; width: 200px'/>
+	{{mars_data.facts | safe}}
+	{% for image in mars_data.hemispheres %}
+	<img src={{image.image_url}} style='height: 300px; width: 200px'/>
+	{% endfor %}
+</body>
+</html>
